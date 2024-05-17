@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse:collapse;
+            border: 3px solid black;
+            background-color: pink;
+        }
+        td{
+            border: 3px solid black;
+            background-color: pink;
+        }
+        .emp{
+            width: 60px;
+        }
+        .day{
+            width: 30px;
+        }
+        .month{
+            width: 30px;
+        }
+        .year{
+            width: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" id="n1"/></td>
+        </tr>
+        <tr>
+            <td>Employee code</td>
+            <td><input type="text" name="name" id="n1" class="emp"/></td>
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td><input type="radio" name="department" id="d1" value="Admin"><label for="d1">Admin</label><br>
+                <input type="radio" name="department" id="d2" value="HR"><label for="d2">HR</label><br>
+                <input type="radio" name="department" id="d3" value="Technical"><label for="d3">Technical</label><br>
+                <input type="radio" name="department" id="d4" value="Accounts"><label for="d4">Accounts</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Date of Joining</td>
+            <td>
+                <input type="text" name="doj" id="doj1" class="day" pattern="^[0-9]{2}$"/>/
+                <input type="text" name="doj" id="doj2" class="month" pattern="^[0-9]{2}$"/>/
+                <input type="text" name="doj" id="doj3" class="year" pattern="^[0-9]{4}$"/><br>
+                <label for="doj1">&nbsp;&nbsp;DD</label>
+                <label for="doj2">&nbsp;&nbsp;&nbsp;&nbsp;MM</label>
+                <label for="doj3">&nbsp;&nbsp;&nbsp;YYYY</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><textarea id="addr" name="addr" rows="4" cols="45"></textarea></td>
+        </tr>
+        <tr>
+            <td>Training Programs Attended</td>
+            <td>
+                <input type="checkbox" name="attended" id="a1" value="HTML/DHTML"><label for="a1">HTML/DHTML</label><br>
+                <input type="checkbox" name="attended" id="a2" value="JAVA"><label for="a2">JAVA</label><br>
+                <input type="checkbox" name="attended" id="a3" value="CLIENT/SERVER"><label for="a3">CLIENT/SERVER</label><br>
+                <input type="checkbox" name="attended" id="a4" value=".NET"><label for="a4">.NET</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Training Programs need to attend</td>
+            <td>
+                <select name="need" id="need" value="" size="2">
+                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                    <option value="JSTRUTS">JSTRUTS</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Send the information at</td>
+            <td><a href="mailto:empinfo@patni.com">empinfo@patni.com</a></td>
+        </tr>
+       
+
+    </table>
+</body>
+</html>

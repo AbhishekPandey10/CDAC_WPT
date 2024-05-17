@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function str()
+    {
+        debugger
+        var str = document.getElementById("inp1").value;
+        var str1 = document.getElementById("inp2").value;
+        var str2 = document.getElementById("inp3").value;
+       var choice=document.getElementsByName("result")
+        for(i=0;i<choice.length;i++){
+            if (choice[i].checked) {
+                switch (choice[i].value) {
+                    case "search":
+                        search(str,str1)
+                        break;
+                    case "upper":
+                        upper(str)
+                        break;
+                    case "lower":
+                        lower(str)
+                        break;
+                    case "trim":
+                        trim(str)
+                        break;
+                    case "concat":
+                        concat(str,str1)
+                        break;
+                    case "replace":
+                        replace(str,str2)
+                        break;
+                    return true
+                }
+            }
+        }
+
+    }
+    function search(str,str1){
+        var res = str.search(str1);
+        document.getElementById("res").value = res+str1;
+    }
+    function upper(str){
+        var res = str.toUpperCase();
+        document.getElementById("res").value = res;
+    }
+    function lower(str){
+        var res = str.toLowerCase();
+        document.getElementById("res").value = res;
+    }
+    function trim(str){
+        var res = str.trim();
+        document.getElementById("res").value = res;
+    }
+    function concat(str,str1){
+        var res = str.concat(str1);
+        document.getElementById("res").value = res;
+    }
+    function replace(str,str2){
+        var res = str.replace(str1,str2);
+        document.getElementById("res").value = res;
+    }
+  </script>
+</head>
+<body>
+    <form>
+  <label for="inp1">Enter the String:</label>
+  <input type="text" name="inp1" id="inp1" class="inp1"><br><BR>
+    <label for="inp2">Enter the Substring:</label>
+  <input type="text" name="inp2" id="inp2" class="inp2"><br><BR>
+    <label for="inp3">Replace the Substring with:</label>
+  <input type="text" name="inp3" id="inp3" class="inp3"><br><BR>
+
+    <input type="radio" name="result" id="res0" class="res0" value="search">
+  <label for="res">Search substring in main string</label>
+  <input type="radio" name="result" id="res1" class="res1" value="upper">
+  <label for="res1">To Upper Case</label>
+  <input type="radio" name="result" id="res2" class="res2" value="lower">
+  <label for="res2">To Lower Case</label>
+  <input type="radio" name="result" id="res3" class="res3" value="trim">
+  <label for="res3">Trim Spaces</label>
+  <input type="radio" name="result" id="res4" class="res4" value="concat">
+  <label for="res4">Concatenate</label>
+  <input type="radio" name="result" id="res5" class="res5" value="replace">
+  <label for="res5">Replace</label><br><br>
+ <button type="button" name="sub" id="sub" class="sub" onclick="str()">Submit Query</button><br>
+  <label for="res">here:</label><br>
+  <textarea name="res" id="res" class="res" readonly cols="50" rows="10"></textarea>
+ 
+  </form>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(53,106,160,255);
+            color: white;
+        }
+        .univ{
+            width: 250px;
+        }
+        .inst{
+            width: 250px;
+        }
+        .deg{
+            width: 50px;
+        }
+        .branch{
+            width: 100px;
+        }
+        .semi{
+            width: 40px;
+        }
+        .cpil{
+            width: 40px;
+        }
+        .exp{
+            width: 60px;
+        }
+        .web{
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset width="60%">
+        <legend>
+            <h2>Registration Details</h2>
+        </legend>
+        <table align="center" width="50%">
+            <tr>
+                <td><b>University:</b></td>
+                <td><input type="text" id="University" name="University" class="univ"></td>
+            </tr>
+            <tr>
+                <td><b>Institute:</b></td>
+                <td><input type="text" id="Institute" name="Institute" class="inst"></td>
+            </tr>
+            <tr>
+                <td><b>Branch:</b></td>
+                <td>
+                    <select name="branch" id="branch" value="" class="branch">
+                        <option value="">--select--</option>
+                        <option value="JSTRUTS">JSTRUTS</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Degree:</b></td>
+                <td>
+                    <select name="Degree" id="Degree" value="" class="deg">
+                    <option value="">--select--</option>
+                    <option value="JSTRUTS">JSTRUTS</option>
+                    <input type="radio" name="deg" id="complete"\><label for="complete">Completed</label>
+                    <input type="radio" name="deg" id="Pursuing"\><label for="Pursuing">Pursuing</label>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td><b>Average CPI:</b></td>
+                <td><input type="number" name="cpi" id="cpi" class="cpil"\>&nbsp;upto&nbsp;<input type="number" name="sem" id="sem" class="semi"\>th sem</td>
+            </tr>
+            <tr>
+                <td><b>Experience:</b></td>
+                <td><input type="number" name="cpi" id="cpi" class="exp"\>&nbsp;years</td>
+            </tr>
+            <tr>
+                <td><b>Your website or blog:</b></td>
+                <td><input type="url" name="website" id="website" class="web"\></td>
+            </tr>
+        </table>
+    </fieldset><br>
+    <map name="image-map">
+        <area coords="0,0,1,264,456,267,267,2" href=" target="_blank" shape="circle">
+
+        <area coords="266,0,456,268,706,268,704,2" href=" target="_blank" shape="circle">
+    </map>
+    <h3  align="center">
+    <img src=".\pic\leftarrow.png">
+    Step 2
+    <img src=".\pic\rightarrow.png">
+</h3>
+</body>
+</html>

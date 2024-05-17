@@ -1,0 +1,131 @@
+body{
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    padding: 10px;
+    margin: 10px;
+}
+
+header img
+{
+    width : 500px;
+}
+
+#nav
+{
+    /* float: right; */
+    background-color: rgb(86, 199, 161);
+}
+
+#nav ul
+{
+    list-style: none;
+    width: 100%;
+    /* margin: 0; */
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#nav li
+{
+    display: inline-block;
+    margin-right: 3%;
+}
+
+#nav a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 30px;
+}
+
+#nav a:hover{
+    color: green;
+}
+
+#nav a:active{
+    color: red;
+}
+
+main
+{
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+}
+
+#section1
+{
+
+    width: 100%;
+}
+
+#section1 article
+{
+    text-align: right;
+    margin-top: 10px;
+
+}
+
+main #table1{
+    width: 100%;
+    border-collapse: collapse;
+}
+#table1, #table1 th, #table1 td{
+    border: 1px solid black;
+    vertical-align: text-top;
+}
+main #table1 thead{
+    background-color: rgb(86, 199, 161); 
+    color: aliceblue;
+    table-layout: fixed;
+}
+
+.firstCol
+{
+    background-color: antiquewhite;
+}
+
+#mainDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+#myDiv1
+{
+    text-align: left; 
+    padding-top: 20px;
+    width: 50%;
+}
+
+#myDiv2
+{
+    width: 50%;
+}
+
+#myDiv2 table{
+    border: 2px solid rgb(212, 90, 196);
+    margin: 20px;
+    margin-left: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(97, 54, 62);
+
+}
+
+#myDiv2 table td{
+    padding-right: 20px;
+}
+
+
+footer{
+    text-align: center;
+    background-color:rgb(86, 199, 161);
+    color: aliceblue;
+    padding: 2px;
+    margin: 10px;
+    font-variant: small-caps;
+}

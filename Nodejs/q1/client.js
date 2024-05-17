@@ -1,0 +1,7 @@
+var m1=require('./calc')
+console.log("addition :",m1.add(10,20))
+console.log("subtract :",m1.subtract(10,20))
+console.log("multiply :",m1.multiply(10,20))
+console.log("divide :",m1.divide(10,20))
+console.log("square :",m1.square(10))
+console.log("sum :",m1.sum(10,20,30))

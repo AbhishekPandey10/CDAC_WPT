@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // Define the Employee object constructor
+        function Employee(empId, empName, empSalary) {
+            this.empId = empId;
+            this.empName = empName;
+            this.empSalary = empSalary;
+        }
+
+        // Create an array of employee objects
+        const employees = [
+            new Employee(101, "John Doe", 50000),
+            new Employee(102, "Jane Smith", 65000),
+            new Employee(103, "Michael Brown", 42000)
+        ];
+
+        // Function to display employee details in a table row
+        function displayEmployee(employee) {
+            const tableBody = document.getElementById("employeeTable").getElementsByTagName("tbody")[0];
+            const tableRow = document.createElement("tr");
+
+            const idCell = document.createElement("td");
+            idCell.textContent = employee.empId;
+            tableRow.appendChild(idCell);
+
+            const nameCell = document.createElement("td");
+            nameCell.textContent = employee.empName;
+            tableRow.appendChild(nameCell);
+
+            const salaryCell = document.createElement("td");
+            salaryCell.textContent = employee.empSalary;
+            tableRow.appendChild(salaryCell);
+
+            tableBody.appendChild(tableRow);
+        }
+
+        // Display employee details in the table using forEach loop
+        employees.forEach(displayEmployee);
+
+        // Loop through employees again to inspect all properties (optional)
+        employees.forEach(employee => {
+            console.log("Employee ID:", employee.empId);
+            console.log("Employee Name:", employee.empName);
+            console.log("Employee Salary:", employee.empSalary);
+            console.log("----");
+        });
+    </script>
+</body>
+</html>

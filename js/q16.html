@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Analysis</title>
+</head>
+<body>
+  <h1>Number of Websites Starting with www</h1>
+  <p id="result"></p>
+
+  <script>
+    function countWwwSites(websites) {
+     
+      const wwwSites = websites.filter(site => site.toLowerCase().startsWith("www."));
+
+      
+      const wwwSiteCount = wwwSites.length;
+
+      return wwwSiteCount;
+    }
+
+    
+    const websites = ["google.com", "amazon.com", "www.wikipedia.org", "www.facebook.com", "stackoverflow.com"];
+
+
+    const numWwwSites = countWwwSites(websites);
+    const resultElement = document.getElementById("result");
+    resultElement.textContent = `Number of websites starting with www: ${numWwwSites}`;
+  </script>
+</body>
+</html>

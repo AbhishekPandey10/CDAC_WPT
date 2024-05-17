@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function multable() {
+      v1 = parseInt(document.getElementById("inp1").value);
+      i=1
+      for(i=1;i<=10;i++)
+      {
+        document.getElementById("res").innerHTML += v1+"*"+i+"="+v1*i+"\n"
+      }
+    }
+  </script>
+</head>
+<body>
+  <label for="inp1">Type the first number:</label>
+  <input type="number" name="inp1" id="inp1" class="inp1">
+  <button type="button" name="sub" id="sub" class="sub" onclick="multable()">Table</button>
+  <label for="res">Table is:</label><br>
+  <textarea name="res" id="res" class="res" rows="12" cols="10" readonly></textarea>
+  <label for="country">Country:</label>
+<input type="text" list="countries" id="country" placeholder="Enter or select a country">
+</body>
+</html>

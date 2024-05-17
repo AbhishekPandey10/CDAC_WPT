@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function multable() {
+      v1 = parseInt(document.getElementById("inp1").value);
+      if(v1%10000>0&&v1%10000<10)
+      {
+        sum=v1%10
+      }else{
+        document.getElementById("res").innerHTML = "invalid input"
+      }
+    }
+  </script>
+</head>
+<body>
+  <label for="inp1">Type the first number:</label>
+  <input type="number" name="inp1" id="inp1" class="inp1">
+  <button type="button" name="sub" id="sub" class="sub" onclick="sumdigit()">sum</button>
+  <label for="res">sum of the digits is:</label><br>
+  <input type="number" name="res" id="res" class="res" readonly/>
+</body>
+</html>

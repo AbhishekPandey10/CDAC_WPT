@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+    color: white;
+}
+fieldset{
+    border-radius: 10px;
+    border: 2px, solid;
+    border-collapse:collapse ;
+    border-color:blue ;
+}
+fieldset legend{
+    background-color: blue;
+    border-radius: 10px;
+}
+.div1{
+    background-color: blue;
+    border-radius: 5px;
+}
+.register{
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+}
+.inp{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}

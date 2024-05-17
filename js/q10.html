@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+     function greet() {
+ now = new Date();
+ day = now.getDay();
+ day = findday(day)
+ hours = now.getHours();
+ minutes = now.getMinutes();
+ if (hours >= 12 && hours < 17) {
+     hours = "good afternoon";
+ } else if (hours >= 17) {
+     hours = "good evening";
+ } else {
+     hours = "good morning";
+ }
+ alert(`Today is ${day}`)
+console.log(`Today is ${day} welcome and ${hours}`);
+  }
+  function findday(day){
+    switch(day){
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tueday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Thusday";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case 6:
+                    day = "Saturday";
+                    break;
+                case 0:
+                    day = "Sunday";
+                    break;
+                default:
+                    day = "Invalid day";
+                    break;
+            }
+            return day;
+  }
+</script>
+</head>
+<body>
+    <button onclick="greet()">Click me</button>
+</body>
+</html>

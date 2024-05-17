@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+     function pow(x, y) {
+    var a = parseInt(document.getElementById("inp1").value);
+    var b = parseInt(document.getElementById("inp2").value);
+    if (isNaN(a) || isNaN(b)) {
+        alert("Please enter valid numbers!");
+        return;
+    }
+    res=a**b
+    res=document.getElementById("out").value = res
+}
+  </script>
+</head>
+<body>
+    <h1 align="center">
+        --------------------------------------------------------------------------------------------------------------------------------<br>
+        ************************Calculate x<sup>y************************<br>
+        --------------------------------------------------------------------------------------------------------------------------------
+    </h1>
+    <table align="center">
+        <tr>
+            <td>
+                Type number1(x):
+            </td>
+            <td>
+                <input type="number" name="inp1" id="inp1" class="inp1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Type number2(y):
+            </td>
+            <td>
+                <input type="number" name="inp2" id="inp2" class="inp2">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" name="sub" id="sub" class="sub" onclick="pow(inp1,inp2)">Calculate</button>
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                x<sup>y</sup>:
+            </td>
+            <td>
+                <input type="number" name="out" id="out" class="out" readonly>
+            </td>
+        </tr>       
+    </table>
+</body>
+
+</html>

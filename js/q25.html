@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="q25.css">
+    <script src="q25.js"></script>
+</head>
+
+<body>
+    <div class="order-form">
+        <h1>Order Details</h1>
+        <form id="order-form">
+            <div class="error-message"></div>
+            <label for="order-id">Order ID:</label>
+            <input type="text" id="order-id" name="orderId" required readonly> 
+
+            <label for="customer-name">Customer Name:</label>
+            <input type="text" id="customer-name" name="customerName" required>
+
+            <label for="billing-date">Billing Date:</label>
+            <input type="date" id="billing-date" name="billingDate" required>
+
+            <label for="shipping-date">Shipping Date:</label>
+            <input type="date" id="shipping-date" name="shippingDate" required>
+
+            <label for="order-total">Order Total:</label>
+            <input type="text" id="order-total" name="orderTotal" required>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+</body>
+
+</html>

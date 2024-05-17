@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Appointment Scheduler</h1>
+    <fieldset>
+        <legend>
+            <h2>Personal Information</h2>
+        </legend>
+        <label for="fname">Name</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="no">Telephone Number</label><br>
+        <input type="text" id="no" name="no"><br>
+        <label for="mail">Email Address</label><br>
+        <input type="text" id="mail" name="mail"><br>
+        <label for="dob">Date Of Birth</label><br>
+        <input type="date" id="dob" name="dob"><br>
+    </fieldset>
+    <fieldset>
+        <legend>
+            <h2>Personal Information</h2>
+        </legend>
+        <label for="reason">what is the reason for your visit:</label><br>
+        <input type="text" list="reasons" id="reason" placeholder="Enter or select a reason">
+        <datalist id="reasons">
+            <option value="cold">cold</option>
+            <option value="fever">fever</option>
+            <option value="cancer">cancer</option>
+        </datalist>
+        <br>
+        <label for="pain">Level of pain</label><br>
+        <input type="range" id="pain" name="pain" min="1" max="10"><br>
+        <label for="date">Prefered date</label><br>
+        <input type="date" id="date" name="date"><br>
+        <label for="time">Prefered Time</label><br>
+        <input type="time" id="time" name="time"><br>
+    </fieldset><BR>
+    <button type="submit">Submit</button>
+</body>
+
+</html>

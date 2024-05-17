@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+}
+    
+.frame1{
+    height: 200px;
+    width: 100%; 
+    border-bottom: 3px solid gray; 
+    border-collapse: collapse;
+}
+.frame2{
+    width: 20%; 
+    height: 720px;
+    float: left; 
+    position: absolute;
+    left:0; 
+    border-right:3px solid gray; 
+    border-collapse: collapse;
+    padding: 10px;
+}
+.frame3{
+    width: 80%; 
+    height: 720px;
+    float: right;  
+    border-left:3px solid gray; 
+    border-collapse: collapse;
+}
+.tab1{
+    font-size: 25px;
+    border: 2px solid;
+    border-collapse: collapse;
+}
+.tab1 tr{
+    border: 2px solid;
+    border-collapse: collapse;
+}
+.tab1 td{
+   border: 2px solid;
+   border-collapse: collapse;
+}
+.day{
+    width: 30px;
+}
+.month{
+    width: 30px;
+}
+.year{
+    width: 30px;
+}
+.empname{
+    width: 300px;
+}
+.email1{
+    width: 300px;
+}

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Members List</title>
+</head>
+<body>
+  <h3> Members of my Group are </h3>
+  <ol id="list"></ol>
+  <script>
+     members = ["John", "Steve", "Ben", "Damon", "Ian"];
+     list = document.getElementById("list");
+
+    for (let member of members) {
+       listItem = document.createElement("li");
+      listItem.textContent = member;
+      list.appendChild(listItem);
+    }
+    function findTrainingDivs() {
+   divs = document.querySelectorAll("div");
+   trainingDivs = [];
+
+  for (let div of divs) {
+    if (div.textContent.toLowerCase().includes("training")) {
+      trainingDivs.push(div);
+    }
+  }
+
+  return trainingDivs;
+}
+
+ trainingDivElements = findTrainingDivs();
+
+if (trainingDivElements.length > 0) {
+  console.log("Found training divs:");
+  for (let div of trainingDivElements) {
+    console.log(div);
+  }
+} else {
+  console.log("No divs containing 'training' were found.");
+}
+  </script>
+</body>
+</html>

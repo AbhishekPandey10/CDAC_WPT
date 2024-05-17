@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="q26.css">
+    <script src="q26.js"></script>
+</head>
+
+<body>
+    <div class="info">
+        <form id="imp" onsubmit="return validateDate()">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="nm">Name:</label></td>
+                        <td colspan="4"><input type="text" name="nm" id="nm"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">Birth Date:</label></td>
+                        <td colspan="3"><input type="number" name="month" id="month" required/>
+                        <input type="number" name="date" id="date" required/>
+                        <input type="number" name="year" id="year" required/></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="mail">Email Address:</label></td>
+                        <td colspan="3"><input type="email" name="mail" id="mail" required/></td>
+                        <td>(Use format name@company.com)</td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Gender:</label></td>
+                        <td colspan="4"><input type="radio" name="gender" id="male"/>
+                        <label for="male">Male</label><br>
+                        <input type="radio" name="gender" id="female"/>
+                        <label for="female">Female</label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lucky">Lucky Number</label></td>
+                        <td colspan="3"><input type="text" name="lucky" id="lucky" required/></td>
+                       
+                        <td>(A number between 1-100)</td>
+                    </tr>
+                    <tr>
+                        <td><label for="food">Favorite Food</label></td>
+                        <td colspan="4"><input type="checkbox" name="pizza" id="pizza" value="pizza"/>
+                            <label for="pizza">Pizza</label><br>
+                            <input type="checkbox" name="pasta" id="pasta" value="pasta"/>
+                            <label for="pasta">Pasta</label><br>
+                            <input type="checkbox" name="chinese" id="chinese" value="chinese"/>
+                            <label for="chinese">Chinese</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><button type="button" name="btn" id="btn" value="btn">Send Data</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
