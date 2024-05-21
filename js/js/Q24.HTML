@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+    <button type="submit" onclick="return validateForm()">Login</button>
+  </form>
+  <p id="errorMessage"></p>
+
+  <script>
+    function validateForm() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      var errorMessage = document.getElementById("errorMessage");
+
+      
+      errorMessage.textContent = "";
+
+      
+      if (username === "" || password === "") {
+        errorMessage.textContent = "Please fill both username and password fields.";
+        return false;
+      }
+
+      if (!/^[a-zA-Z]{6,10}$/.test(username)) {
+        errorMessage.textContent = "Username must be between 6 and 10 characters and only contain letters.";
+        return false;
+      }
+
+  
+      if (!/(?=.*\d)(?=.*#).{8,}/.test(password)) {
+        errorMessage.textContent = "Password must be at least 8 characters and include at least one digit (#) and one number.";
+        return false;
+      }
+
+     
+      return true;
+    }
+  </script>
+</body>
+</html>

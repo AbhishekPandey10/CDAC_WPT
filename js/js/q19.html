@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function num() {
+      var number = parseInt(document.getElementById("no").value);
+      if (number < 1 || number >= 1000) {
+        document.getElementById("res").textContent= "Entered number is out of range (1 to 999).";
+      } else {
+        var sum = 0;
+        while (number > 0) {
+          sum += number % 10;
+          number = Math.floor(number / 10);
+        }
+        document.getElementById("res").textContent= sum; 
+    }
+}
+  </script>
+</head>
+<body>
+  <form>
+    <label for="no">Enter the Positive Number:</label>
+    <input type="number" name="no" id="no" class="no"><br>
+    <button type="button" name="res" id="res" class="res" onclick="num()">Sum of Digits</button><br>
+  </form>
+</body>
+</html>

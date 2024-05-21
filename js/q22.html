@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search Divs</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("#search-button").click(function() {
+    var searchTerm = $("#search-term").val().toLowerCase();
+    searchDivs(searchTerm);
+  });
+});
+
+function searchDivs(searchTerm) {
+  $("#results").html("");
+  $("div").each(function() {
+    var content = $(this).text().toLowerCase();
+    if (content.indexOf(searchTerm) !== -1) {
+      $("#results").append("<p>Found training in: " + $(this).text() + "</p>");
+    }
+  });
+}
+</script>
+</head>
+<body>
+  <input type="text" id="search-term" placeholder="Enter search term">
+  <button id="search-button">Search</button>
+  <div id="results"></div>
+</body>
+</html>

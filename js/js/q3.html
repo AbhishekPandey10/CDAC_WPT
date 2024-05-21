@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function even() {
+        i=1
+      v1 = parseInt(document.getElementById("inp1").value)
+      while(i<=v1)
+      {
+        if(i%2==0)
+        {
+          document.getElementById("res").value += i+"\n"
+        }
+        i++
+      }
+    }
+  </script>
+</head>
+<body>
+  <label for="inp1">Type a number:</label>
+  <input type="number" name="inp1" id="inp1" class="inp1"><br>
+  <button type="button" name="sub" id="sub" class="sub" onclick="even()">even</button><br>
+  <label for="res">here:</label><br>
+  <textarea name="res" id="res" class="res" readonly cols="50" rows="10"></textarea>
+</body>
+</html>

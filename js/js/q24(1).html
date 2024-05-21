@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="login-form">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="error-message"></div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const errorMessage = document.querySelector('.error-message');
+        loginForm.addeventListener('submit', function(e) {
+            e.preventDefault();
+             username = document.getElementById('username').value;
+             password = document.getElementById('password').value;
+            if (username.length < 6 || username.length > 10) {
+                errorMessage.textContent = "Username must be between 6 and 10 characters";
+                return;
+            }
+             hasdigit = password.search(/\d/) > -1;
+             hashash = password.search(/#/) > -1;
+
+            if (!hasDigit || !hasHash || password.length < 8) {
+                errorMessage.textContent = "Password must be at least 8 characters and contain at least one digit and one #";
+                return;
+            }
+            console.log('Login successful!');
+            errorMessage.textContent = "";
+            alert('You have successfully logged in!');
+        });
+    </script>
+</body>
+</html>

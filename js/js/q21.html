@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Members List</title>
+<script src="https://code.jquery.com.min.js"></script>  <script>
+$(document).ready(function() {
+  var members = ["Priya", "Abhishek", "Ayush", "Yaser", "Sorav"];
+  $.each(members, function(index, value) {
+    $("#list").append("<li>" + value + "</li>");
+  });
+});
+</script>
+</head>
+<body>
+  <h3>Members of my Group are</h3>
+  <ol id="list"></ol>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc() {
+            num1 = parseInt(document.getElementById("inp1").value)
+            num2 = parseInt(document.getElementById("inp2").value)
+            op=document.getElementById("op").value
+
+            switch (op) 
+            {
+                case '+': 
+                resultat = (num1 + num2); 
+                break;
+                case '-': 
+                resultat = (num1 - num2); 
+                break;
+                case '*': 
+                resultat = (num1 * num2); 
+                break;
+                case '/': 
+                resultat = (num1 / num2); 
+                break;
+                default: alert("Invalid Choice");
+                break;
+            }
+
+            document.getElementById("res").value = resultat;
+
+        }
+    </script>
+</head>
+
+<body>
+    <label for="inp1">Type a number1:</label>
+    <input type="number" name="inp1" id="inp1" class="inp1">
+    <label for="inp2">Type a number2:</label>
+    <input type="number" name="inp2" id="inp2" class="inp2"><br>
+    <label for="op">Type an operator:</label>
+    <input type="text" name="op" id="op" class="op" pattern="[+,-,*,/]"><br>
+    <button type="button" name="sub" id="sub" class="sub" onclick="calc()">Calculate</button><br>
+    <label for="res">Calculation is:</label><br>
+    <input type="number" name="res" id="res" class="res" readonly><br>
+
+</body>
+
+</html>
